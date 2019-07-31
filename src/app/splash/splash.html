@@ -1,0 +1,14 @@
+<section class="flex fullCenter splash" [ngStyle]="{'background-image': 'url(' + fondoBackground + ')'}">
+    <div class="splash__panel">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 60">
+        <defs>
+        <filter id="outline">
+            <feMorphology operator="dilate" in="SourceAlpha" radius="1.5"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        </defs>
+        <text x="20" y="50" dx="15, -10, -8, -8" filter="url(#outline)" fill="#fff">KEOS</text>
+        </svg>
+        <button class="btn-primary" (click)="removeSplash();" mat-raised-button color="primary">Ingresar</button>
+    </div>
+</section>

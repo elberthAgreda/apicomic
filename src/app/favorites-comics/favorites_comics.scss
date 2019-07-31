@@ -1,0 +1,84 @@
+$information-phone: "only screen and (max-width : 620px)";
+
+.favorites {
+    background-image: url(../../assets/fondo_comic.jpg);
+    min-height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: contain;
+    > img {
+        background-color: #2b2b2b;
+        padding: 10px 30px;
+    }
+    .favorites__content {
+        width: 90%;
+        margin: 0px auto;
+        padding: 30px 0px;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    .favorites__card {
+        max-width: 300px;
+        margin-right: 20px;
+        margin-bottom: 30px;
+    }
+
+    .bubble{
+        position:relative;
+    }
+    .bubble p{
+    font-size:1.2em;
+    font-weight:500;
+    letter-spacing:2px;
+    font-family: 'Shadows Into Light', cursive;
+    text-shadow:1px 1px hsla(0,15%,20%,.15), 
+                2px 1px hsla(0,15%,20%,.12),
+                3px 2px hsla(0,15%,20%,.1),
+                4px 2px hsla(0,15%,20%,.085),
+                5px 4px hsla(0,15%,20%,.075),
+                6px 5px hsla(0,15%,20%,.055),
+                7px 6px hsla(0,15%,20%,.015);
+    }
+    .bubble.one {
+        margin:0 auto 20px;
+        left:-75px;
+        width:100px;
+        height:100px;
+        background:#1d938b;
+        border-radius:50px;
+        box-shadow:
+            50px 0 0 #1d938b,
+            100px 0 0 #1d938b,
+            150px 0 0 #1d938b;
+    
+    }
+    .bubble.one:before {
+        position:absolute;
+        content:'';
+        display:block;
+        width:0;
+        height:0;
+        top:92px;
+        left:116px;
+        border-top:18px solid #1d938b;
+        border-left:8px solid transparent;
+        border-right:8px solid transparent;
+    }
+
+    .bubble.one p{
+        position:absolute;
+        top:0px;
+        left:20px;
+        width:225px;
+        color:hsla(255,255%,255%,1);
+        font-size:1.8em;
+        text-align:center;
+    }
+
+}
+@media #{$information-phone} {
+    .logo_keos {
+        width: 120px;
+    }
+}

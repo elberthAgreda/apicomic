@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:800italic|Allan:700);
+@font-face {
+    font-family: 'BadaboomBB';
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/badaboombb.woff2') format('woff2'),
+    url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/badaboombb.woff') format('woff');
+    font-style: normal;
+    font-weight: 400;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.flex { display: flex }
+.fullCenter {
+    justify-content: center;
+    align-items: center;
+}

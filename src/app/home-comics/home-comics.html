@@ -1,0 +1,60 @@
+<section class="flex fullCenter comic">
+
+    <img class="logo_keos" alt="keos" src="https://keos.co/dist/img/logo.png">
+    
+    <div class="comic__fondo">
+    
+        <figure class="svg_container dialogo">
+        <span class="texto">
+            {{comic.title}}
+        </span>
+        <svg class="svg_img burbuja" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 257.99 202.62" preserveAspectRatio="none">
+            <path class="svg_shape borde" d="M241.17 68.78A48.5 48.5 0 0 0 172 15.26a46.29 46.29 0 0 0-72.2 4.42A41.26 41.26 0 0 0 42.19 65.9h-.94A41.25 41.25 0 0 0 30.77 147 35.71 35.71 0 0 0 79 187.09a41.23 41.23 0 0 0 60.48 4.34 70.91 70.91 0 0 0 102.75-63.38v-.74a34.44 34.44 0 0 0-1.06-58.53z"/>
+            <path class="svg_shape relleno" d="M239.8 73.14a39.31 39.31 0 0 0 1.07-9.14c0-24.06-20.32-46.08-47.11-46.08a52.81 52.81 0 0 0-21.7 4.61s-8.95-14.92-34.63-14.92C110.46 7.61 99.8 28 99.8 28a45 45 0 0 0-17.3-3.42c-22.78 0-39.75 16.59-39.75 37.05a33.74 33.74 0 0 0 .94 7.89h-2.44C18.47 69.45 1.1 86 1.1 106.44c0 17.21 14.46 32 32.17 36.14a28.77 28.77 0 0 0-.67 6.19c0 17.71 13.48 31.83 33.2 31.83a39.24 39.24 0 0 0 13.2-2.28s7.5 19 30.75 19c19 0 29.34-11.25 29.34-11.25 9.57 4.33 20.55 5.75 32 5.75 39.17 0 70.63-32 70.63-67.15 0-.22-.28 5.69 0 0 9.48-5.51 14.37-15.45 14.37-26.35.01-11.32-6.22-19.78-16.29-25.18z"/>
+            </svg>
+        
+        <svg class="svg_img coletilla" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 211.33 138">
+            <path class="svg_shape borde" d="M125.14 24S144 114.81 0 137.48c0 0 203 16 211-130.33z"/>
+            <path class="svg_shape relleno" d="M125.14 24s26.6 85.35-85.31 108.63c0 0 151.5-16 171.5-127.17 0 0-4-12.33-46 0C123.78 17.68 125.14 24 125.14 24z"/>
+        </svg>  
+        
+        <svg class="svg_img sombra" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 257.99 202.62" preserveAspectRatio="none">
+            <defs>
+            <pattern id="patron" patternUnits="userSpaceOnUse" height="240" width="240">
+                <image x="0" y="0" height="240" width="240" xlink:href="http://gutierrezedgar.com/popart/img/06-ref-01.png"></image>
+            </pattern>
+            </defs>
+            <path class="svg_shape fondo" d="M241.17 68.78A48.5 48.5 0 0 0 172 15.26a46.29 46.29 0 0 0-72.2 4.42A41.26 41.26 0 0 0 42.19 65.9h-.94A41.25 41.25 0 0 0 30.77 147 35.71 35.71 0 0 0 79 187.09a41.23 41.23 0 0 0 60.48 4.34 70.91 70.91 0 0 0 102.75-63.38v-.74a34.44 34.44 0 0 0-1.06-58.53z" fill="url(#patron)"/>
+        </svg>  
+        
+        <svg class="svg_img silueta" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 257.99 202.62" preserveAspectRatio="none">
+            <path class="svg_shape" d="M241.17 68.78A48.5 48.5 0 0 0 172 15.26a46.29 46.29 0 0 0-72.2 4.42A41.26 41.26 0 0 0 42.19 65.9h-.94A41.25 41.25 0 0 0 30.77 147 35.71 35.71 0 0 0 79 187.09a41.23 41.23 0 0 0 60.48 4.34 70.91 70.91 0 0 0 102.75-63.38v-.74a34.44 34.44 0 0 0-1.06-58.53z"/>
+        </svg>
+        
+        
+        </figure>
+    
+        <img  class="comic__visual" [src]="comic.img" default="assets/no-image.jpg" alt="safe_title">
+    
+        <div class="flex fullCenter comic__controls">
+        <button (click)="changeComic('B');" mat-mini-fab>
+            <i class="material-icons">chevron_left</i>
+        </button>
+        <button (click)="changeComic('N');" mat-mini-fab>
+            <i class="material-icons">chevron_right</i>
+        </button>
+        <button (click)="randomComic();" mat-mini-fab>
+            <i class="material-icons">refresh</i>
+        </button>
+        <button (click)="favoriteComic(comic);" mat-mini-fab>
+            <i class="material-icons">favorite</i>
+        </button>
+        </div>
+        <button (click)="showFavorites();" mat-raised-button color="primary">
+            Ver Favoritos <i class="material-icons">favorite</i>
+        </button>
+    
+    </div>
+    
+    </section>
+      

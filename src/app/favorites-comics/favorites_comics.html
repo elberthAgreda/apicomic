@@ -1,0 +1,24 @@
+<section class="favorites">
+    <img class="logo_keos" alt="keos" src="https://keos.co/dist/img/logo.png">
+
+    <div class="bubble one">
+        <p>Mis favoritos</p>
+    </div>
+        
+
+    <div class="flex favorites__content">
+        <mat-card *ngFor="let favorites of favoritesComics" class="favorites__card">
+            <mat-card-header>
+                <mat-card-title>{{favorites.comicName}}</mat-card-title>
+                <mat-card-subtitle>Me gusto el {{favorites.date | date:'short'}}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image [src]="favorites.comicsUrl" [alt]="favorites.comicAlt">
+            <mat-card-content>
+                <p>{{favorites.comicDescription}}</p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-button color="primary">Quitar</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</section>

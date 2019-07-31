@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap');
+
+$primary-color: #189D95;
+$information-phone: "only screen and (max-width : 620px)";
+
+.comic{
+  min-height: 100vh;
+  width: 100vw;
+  margin: 0px;
+}
+
+.comic {
+    flex-flow: column;
+    background-color: #2b2b2b;
+
+img.logo_keos {
+    position: absolute;
+    left: 20px;
+    top: 30px;
+    width: 230px;
+    height: auto;
+}
+
+.comic__controls {
+  margin: 20px 0px;
+  button {
+    margin-right: 10px;
+  }
+}
+
+.dialogo{
+    font-size: 20px;
+    position: relative;
+    padding: 4em 3em;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    transition: all ease .4s;
+  }
+  
+  .dialogo::before{
+    position: absolute;
+    z-index: 1;
+    content: '';
+    mask: url();
+  }
+  
+  .svg_img.sombra{
+    position: absolute;
+    z-index: 2;
+    left: 1em;
+    top: 1em;
+  }
+  
+  .dialogo:focus{
+    outline: none;
+  }
+  
+  .dialogo:focus .svg_shape.borde{
+    fill: blue;
+  }
+  
+  .dialogo .texto{
+    position: relative;
+    z-index: 4;
+    font-family: 'Shadows Into Light', cursive;
+  }
+  
+  .svg_container{
+    width: 200px;
+    position: absolute;
+    top: 20px;
+    right: 0px;
+  }
+  
+  .svg_container .fondo{
+    z-index: 2;
+  }
+  
+  .svg_container .silueta{ 
+    fill: $primary-color;
+    z-index: 1;
+    left: .5em;
+    top: .5em;
+  }
+  .svg_container .burbuja,
+  .svg_container .coletilla{
+    z-index: 3;
+  }
+  
+  .svg_img{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all ease .4s;
+  }
+  
+  svg *{  
+    transition: all ease .4s;
+  }
+  
+  .dialogo b{
+    font-family: 'Bangers', sans-serif;
+    font-size: 1.4em;
+    display: inline-block;
+    color: yellow;
+    letter-spacing: 0.1em;
+    transform: rotateZ(-3deg) skewX(-20deg) rotateY(10deg) rotateX(10deg);
+    text-shadow: 
+      1px 1px 0 black,    
+      -1px 1px 0 black,    
+      -1px -1px 0 black,    
+      1px -1px 0 black /*1*/,
+      2px 2px 0 black,    
+      -2px 2px 0 black,    
+      -2px -2px 0 black,    
+      2px -2px 0 black /*2*/,
+      5px 5px 0 black,    
+      4px 4px 0 black,    
+      3px 3px 0 black/*3*/;
+  }
+  
+  .coletilla {
+      top: 50%;
+      width: 5em;
+      left: 12%;
+      transform: rotatez(15deg);
+      transform-origin: 100% 0%;
+  }
+  
+  .svg_shape.borde { 
+    fill: black; 
+  }
+  .svg_shape.relleno { 
+    fill: white; 
+  }
+}
+.comic__title {
+    margin: 0px;
+}
+
+.comic__fondo {
+  background-image: url(../../assets/fondo_comic.jpg);
+  padding: 30px;
+  box-shadow: 0px 0px 10px #353535;
+  > img {
+    box-shadow: 0px 0px 10px #717373;
+    height: 60vh;
+    max-width: 900px;
+  }
+}
+@media #{$information-phone} {
+  .comic__fondo {
+    padding: 20px;
+    > img {
+      width: 260px;
+      height: auto;
+    }
+  }
+  .comic {
+    padding-top: 100px;
+    padding-bottom: 40px;
+    img.logo_keos{
+      left: 12px;
+      top: 20px;
+      width: 120px;
+    }
+    svg {
+      width: 30px;
+    }
+    .dialogo {
+      width: 90px;
+      font-size: 13px;
+      padding: 2em 3em;
+    }
+  }
+}
